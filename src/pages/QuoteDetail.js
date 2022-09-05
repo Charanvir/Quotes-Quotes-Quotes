@@ -21,6 +21,10 @@ const QuoteDetail = () => {
 
     const quote = DUMMY_QUOTES.find(quote => quote.id === params.quoteId)
 
+    if (!quote) {
+        return <p>No quote found!</p>
+    }
+
     return (
         <Fragment>
             <h1>Viewing a Quote by: {quote.author}</h1>
