@@ -1,11 +1,20 @@
-import { useParams } from "react-router-dom";
+import { Fragment } from "react";
+import { useParams, Route } from "react-router-dom";
+import Comments from "../components/comments/Comments";
 
 const QuoteDetail = () => {
     const params = useParams();
-    console.log(params)
 
     return (
-        <h1>{params.quoteId}</h1>
+        <Fragment>
+            <h1>Viewing A Single Quote's Detail</h1>
+            <p>{params.quoteId}</p>
+
+            <Route path={`/quotes/${params.quoteId}/comments`}>
+                <Comments></Comments>
+            </Route>
+
+        </Fragment>
     )
 }
 
