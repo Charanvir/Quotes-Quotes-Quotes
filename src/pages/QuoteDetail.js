@@ -1,6 +1,11 @@
+import { useParams } from "react-router-dom";
+
 const QuoteDetail = () => {
+    const params = useParams();
+    console.log(params)
+
     return (
-        <h1>Viewing A Single Quote</h1>
+        <h1>{params.quoteId}</h1>
     )
 }
 

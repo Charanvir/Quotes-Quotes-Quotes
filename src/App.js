@@ -17,6 +17,9 @@ function App() {
         <Route path='/new-quote'>
           <NewQuote></NewQuote>
         </Route>
+        <Route path='/*' exact>
+          <AllQuotes></AllQuotes>
+        </Route>
       </Switch>
     </div>
   );
