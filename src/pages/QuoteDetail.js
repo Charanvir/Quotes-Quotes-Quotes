@@ -30,7 +30,7 @@ const QuoteDetail = () => {
         )
     }
 
-    if (!loadedQuote) {
+    if (!loadedQuote.text) {
         return <p>No quote found!</p>
     }
 
